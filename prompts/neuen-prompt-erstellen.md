@@ -35,6 +35,7 @@ Eine kurze, klare Bezeichnung.
 
 ## Finaler Prompt
 Ein direkt kopierbarer Prompt als Markdown-Codeblock.
+Wenn der Zielkontext ein Prompt-Repo, ein Slash-Command oder eine dateibasierte Prompt-Sammlung ist, beginne den finalen Prompt mit passender Frontmatter, mindestens mit `name` und `description`.
 
 ## Optionale Variablen
 Nur die Platzhalter, die tatsächlich nützlich oder nötig sind.
