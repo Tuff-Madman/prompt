@@ -1,3 +1,5 @@
+<!-- AI-NOTE: All hidden comments in this file using the `AI-NOTE:` prefix are AI-addressed internal guidance for usage, application, decision-making, reasoning, maintenance, and future specification work. They should not be understood or treated as user-addressed comments or as part of the document’s user-facing content. -->
+
 # About this repository
 
 This repository contains reusable prompts and is intended to support consistent authoring, organization, reuse, and extension across prompt files.
@@ -49,4 +51,4 @@ prompts/example-prompt.prompt.md
 
 The repository should remain a simple, clean prompt library rather than turning into a chaotic dumping ground for half-finished prompt fragments.
 
-<!-- Additional sections are still required and should be added below to further specify prompt authoring guidance, category indexing, validation rules, and related repository conventions. -->
+<!-- AI-NOTE: Additional sections are still required and should be added below to further specify prompt authoring guidance, category indexing, validation rules, and related repository conventions. -->
