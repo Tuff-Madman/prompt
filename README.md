@@ -21,7 +21,7 @@ The frontmatter defines the prompt's identity, high-level intent, activation con
 | `when_to_use` | No | Additional AI-addressed activation context describing when the prompt should be used, such as trigger phrases, typical user requests, or usage conditions. Use a single string value. Combined with `description`, this field is hard-capped at 1536 characters. |
 | `arguments` | No | The expected prompt arguments as an `argument: description` mapping, where each description should function as a compact input contract by clarifying the argument’s role, expected specificity, whether it is required, optional, or contextually required, and any constraints, suggestions, or selection affordances relevant to how it should be supplied. |
 | `argument-hint` | If `arguments` is present | A condensed, argument-oriented guidance string that mirrors the semantic input structure defined in `arguments` at a higher level. If `arguments` is specified, `argument-hint` should also be provided to reflect the same expected input logic in a more compact form. |
-| `tools` | No | A list of allowed tool or tool set names, expressed as one string value per list item. |
+| `tools` | No | A list of allowed tool or tool set names, expressed as a YAML block list with one string value per list item. |
 | `status` | Yes | The current working state of the prompt. Allowed values: `concept`, `draft`, `approved`. |
 | `category` | No | The canonical thematic grouping or classification of the prompt, expressed as a single string value. See the category index for allowed values. |
 
