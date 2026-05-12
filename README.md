@@ -49,4 +49,4 @@ prompts/example-prompt.prompt.md
 
 The repository should remain a simple, clean prompt library rather than turning into a chaotic dumping ground for half-finished prompt fragments.
 
-<!-- Additional sections may be added over time to further define prompt authoring guidance, category indexing, validation rules, and related repository conventions. -->
+<!-- Additional sections are still required and should be added below to further specify prompt authoring guidance, category indexing, validation rules, and related repository conventions. -->
