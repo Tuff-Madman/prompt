@@ -1,6 +1,8 @@
 # About this repository
 
-This repository contains reusable prompts. Each prompt must be maintained as a Markdown prompt file with the `.prompt.md` extension, which is strictly required, to ensure a consistent, versionable, and extensible file format.
+This repository contains reusable prompts and is intended to support consistent authoring, organization, reuse, and extension across prompt files.
+
+Each prompt is maintained as a Markdown prompt file with the strictly required `.prompt.md` extension.
 
 ## Prompt file format and structure
 
