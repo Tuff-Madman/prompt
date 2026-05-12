@@ -1,18 +1,6 @@
-# prompt
+# About this repository
 
-Kleines Repository für dateibasierte Prompts.
-
-## Zweck
-
-Dieses Repo sammelt einzelne Prompts als Markdown-Dateien, damit sie klar versionierbar, wiederverwendbar und leicht erweiterbar bleiben.
-
-## Struktur
-
-```text
-prompts/
-  <promptname>.md
-README.md
-```
+This repository contains reusable prompts. Each prompt must be maintained as a Markdown prompt file with the `.prompt.md` extension, which is strictly required, to ensure a consistent, versionable, and extensible file format.
 
 ## Prompt file format and structure
 
@@ -33,27 +21,28 @@ The frontmatter defines the prompt's identity, high-level intent, activation con
 | `status` | Yes | The current working state of the prompt. Allowed values: `concept`, `draft`, `approved`. |
 | `category` | No | The canonical thematic grouping or classification of the prompt, expressed as a single string value. See the category index for allowed values. |
 
-## Konventionen
+## Conventions
 
-- Eine Datei pro Prompt
-- Dateiname möglichst nah am `name`
-- Kurze, klare `description`
-- `trigger` optional, aber sinnvoll bei slash-basiertem Aufruf
-- Inhalt operativ, knapp und direkt nutzbar formulieren
+- One file per prompt
+- Use the `.prompt.md` extension for every prompt file
+- The file name must match `name` without the `.prompt.md` extension
+- Keep `description` dense, clear, and practically informative
+- Keep prompt content operational, concise, and directly usable
 
-## Neuer Prompt
+## Creating a new prompt
 
-1. Neue Datei unter `prompts/` anlegen
-2. Frontmatter ergänzen
-3. Zweck, Aufgabe, Vorgehen und Ausgabeformat sauber strukturieren
-4. Prompt committen
+1. Create a new file under `prompts/`
+2. Use the `.prompt.md` extension
+3. Add the required frontmatter
+4. Structure the prompt clearly in Markdown
+5. Commit the prompt file
 
-## Beispiel
+## Example
 
 ```text
-prompts/neuen-prompt-erstellen.md
+prompts/example-prompt.prompt.md
 ```
 
-## Zielbild
+## Goal
 
-Das Repo soll eine einfache, saubere Prompt-Bibliothek bleiben und kein chaotischer Abladeort für halbgare Textfragmente werden.
+The repository should remain a simple, clean prompt library rather than turning into a chaotic dumping ground for half-finished prompt fragments.
