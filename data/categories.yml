@@ -1,0 +1,36 @@
+# Category index field semantics
+# name: required; canonical, stable, unique kebab-case category key; authoritative reference target for `category` in prompt frontmatter.
+# description: required; dense AI-addressed semantic scope definition; defines meaning, inclusion boundary, and distinction from nearby or confusable categories.
+# parent: optional; canonical `name` of the direct parent category; used only for subcategories and omitted for root categories; defines taxonomy structure only.
+
+- name: retrieval
+  description: Prompts for finding, narrowing, and retrieving information.
+
+- name: query-engine
+  description: Prompts for rewriting, expanding, or optimizing search queries.
+  parent: retrieval
+
+- name: writing
+  description: General writing prompts.
+
+- name: technical-writing
+  description: Prompts for documentation, guides, and API writing.
+  parent: writing
+
+- name: coding
+  description: General software development prompts.
+
+- name: code-review
+  description: Prompts for reviewing code quality, logic, and structure.
+  parent: coding
+
+- name: analysis
+  description: Prompts for examining, interpreting, and structuring information.
+
+- name: classification
+  description: Prompts for assigning content to categories, labels, or classes.
+  parent: analysis
+
+- name: summarization
+  description: Prompts for condensing content into shorter, focused representations.
+  parent: analysis
