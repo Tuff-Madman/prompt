@@ -1,0 +1,89 @@
+# Category index field semantics
+# name: required; canonical, stable, unique kebab-case category key; authoritative reference target for `category` in prompt frontmatter.
+# description: required; dense AI-addressed semantic scope definition; defines meaning, inclusion boundary, and distinction from nearby or confusable categories.
+# parent: optional; canonical `name` of the direct parent category; used only for subcategories and omitted for root categories; defines taxonomy structure only.
+
+- name: retrieval
+  description: >-
+    Scope includes prompts for information discovery, filtering, lookup, source
+    location, and extraction from existing corpora, datasets, documentation, or
+    knowledge bases. Prioritizes finding and narrowing relevant material over
+    interpreting it, transforming it, or generating new content. Distinct from
+    analysis, which synthesizes or evaluates found information, and from
+    query-engine, which focuses on improving the search expression itself.
+
+- name: query-engine
+  description: >-
+    Scope includes prompts for constructing, rewriting, expanding, narrowing,
+    decomposing, or optimizing search queries and retrieval instructions.
+    Prioritizes query formulation, keyword strategy, boolean logic, facet
+    selection, and search intent translation. Distinct from retrieval, which
+    executes or reasons over the finding task after a query exists.
+  parent: retrieval
+
+- name: writing
+  description: >-
+    Scope includes prompts for creative, professional, editorial, and
+    general-purpose prose generation or revision. Covers drafting, rewriting,
+    tone adjustment, style transformation, narrative shaping, and reader-facing
+    text improvement. Distinct from technical-writing, which centers on formal
+    documentation and procedural explanation, and from coding, which produces or
+    changes executable artifacts.
+
+- name: technical-writing
+  description: >-
+    Scope includes prompts for structured documentation, guides, references,
+    release notes, API explanations, implementation notes, and procedural
+    technical communication. Prioritizes accuracy, sequence, terminology, and
+    reader enablement for technical subjects. Distinct from writing by its
+    documentation intent and from coding by producing explanatory text rather
+    than executable code.
+  parent: writing
+
+- name: coding
+  description: >-
+    Scope includes prompts for software development tasks that create, modify,
+    debug, refactor, configure, or explain code and related executable project
+    artifacts. Prioritizes programming language semantics, runtime behavior,
+    build configuration, and implementation correctness. Distinct from writing,
+    which produces prose, and from code-review, which evaluates code rather than
+    primarily generating or changing it.
+
+- name: code-review
+  description: >-
+    Scope includes prompts for evaluating code changes, identifying defects,
+    assessing maintainability, reviewing architecture, checking test coverage,
+    and surfacing regression risk. Prioritizes critique, validation, and
+    actionable findings over producing new implementation. Distinct from coding,
+    which performs code creation or modification as the main task.
+  parent: coding
+
+- name: analysis
+  description: >-
+    Scope includes prompts for examining, interpreting, comparing, structuring,
+    and reasoning over information to derive conclusions, patterns, decisions,
+    or transformed representations. Prioritizes synthesis, evaluation, and
+    meaning-making after information is available. Distinct from retrieval,
+    which focuses on locating source material, and from classification, which
+    assigns items to predefined category systems.
+
+- name: classification
+  description: >-
+    Scope includes prompts for assigning content, records, prompts, documents,
+    or observations to categories, labels, taxonomies, classes, or routing
+    buckets. Prioritizes boundary definitions, decision criteria, ambiguity
+    handling, and consistent label selection. Distinct from analysis by its
+    constrained output space and from retrieval by classifying known inputs
+    rather than finding them.
+  parent: analysis
+
+- name: summarization
+  description: >-
+    Scope includes prompts for condensing documents, conversations, findings,
+    transcripts, or source material into shorter representations while retaining
+    salient meaning, decisions, evidence, and action-relevant details.
+    Prioritizes compression, selection, and faithful restatement. Distinct from
+    analysis when the main task is reduction rather than interpretation, and
+    from writing when the source-bound summary is more important than original
+    prose generation.
+  parent: analysis

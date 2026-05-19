@@ -25,6 +25,18 @@ The frontmatter defines the prompt's identity, high-level intent, activation con
 | `status` | Yes | The current working state of the prompt. Allowed values: `concept`, `draft`, `approved`. |
 | `category` | No | The canonical thematic grouping or classification of the prompt, expressed as a single string value. See the category index for allowed values. |
 
+### Category index schema
+
+The category index is maintained in `data/categories.yml`.
+
+The category index defines the canonical registry of allowed prompt categories. It is AI-addressed and optimized for stable prompt classification, retrieval, disambiguation, and taxonomy-aware organization.
+
+| Field | Required | Description |
+|---|---|---|
+| `name` | Yes | The canonical category key. Must be unique, stable, and expressed in kebab-case using lowercase letters, numbers, and hyphens only. This value is the authoritative reference target for `category` in prompt frontmatter. |
+| `description` | Yes | A dense AI-addressed semantic scope definition of the category. It defines the category’s intended meaning, primary inclusion boundary, and practical distinction from nearby or potentially confusable categories. It is optimized for interpretive precision, classification usefulness, and retrieval relevance rather than stylistic readability. |
+| `parent` | No | The canonical `name` of the direct parent category. This field is used only for subcategories and omitted for root categories. It defines taxonomy structure inside the category index and must not be used as an additional prompt-level category assignment. |
+
 ## Conventions
 
 - One file per prompt
