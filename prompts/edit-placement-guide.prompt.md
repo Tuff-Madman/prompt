@@ -3,10 +3,10 @@ name: edit-placement-guide
 description: Creates a numbered placement guide that maps recommended edits to exact document locations, including edit description, required action, and precise placement anchors.
 when_to_use: Use when recommended edits need to be converted into a precise numbered placement guide for applying changes to a document by section, paragraph, line number, heading, theorem, or anchor text.
 arguments:
-  recommended_edits: Required. The list of edits, recommendations, or change requests to map onto the target document.
-  target_document: Contextually required. The document or document excerpt whose sections, paragraphs, lines, headings, or anchor text should be used for placement.
-  additional_edit_specification: Optional. Extra instructions supplied after invocation that constrain placement, action labels, ordering, or formatting.
-argument-hint: Provide recommended edits, the target document or excerpt, and any additional placement or formatting constraints.
+  recommended_edits: Required. The concrete edits, reviewer comments, suggested changes, or revision requests that must be placed into the target document. Each item should be specific enough to identify what needs to change, but may be unresolved, unordered, or not yet tied to a location.
+  target_document: Contextually required. The full document, excerpt, outline, or numbered text used to identify reliable placement anchors such as headings, sections, paragraphs, line numbers, theorem labels, table captions, figure references, or exact quoted text.
+  additional_edit_specification: Optional. Extra constraints that affect placement logic or output shape, such as preferred action labels, required granularity, ordering rules, fallback behavior when exact line numbers are missing, or whether uncertain placements should be flagged.
+argument-hint: Provide the recommended edits plus the target document or excerpt; optionally add constraints for placement precision, action labels, ordering, fallback anchors, and uncertainty handling.
 tools: []
 status: draft
 category: editing
