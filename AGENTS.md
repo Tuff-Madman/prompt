@@ -1,14 +1,14 @@
-<!-- AI-NOTE: All hidden comments in this file using the `AI-NOTE:` prefix are AI-addressed internal guidance for usage, application, decision-making, reasoning, maintenance, and future specification work. They should not be understood or treated as user-addressed comments or as part of the document’s user-facing content. -->
+# Repository instructions
 
-# About this repository
-
-This repository contains reusable prompts and is intended to support consistent authoring, organization, reuse, and extension across prompt files.
-
-Each prompt is maintained as a Markdown prompt file with the strictly required `.prompt.md` extension.
+Follow these instructions when creating, editing, retrieving, applying, validating, or maintaining reusable prompt files in this repository, as specified below.
 
 ## Prompt file format and structure
 
-Each prompt file must consist of a required YAML frontmatter metadata block followed by a Markdown body containing the prompt itself.
+Maintain each prompt as a Markdown prompt file with the strictly required `.prompt.md` extension.
+
+Pattern for prompt files: `prompts/<prompt-name>.prompt.md`.
+
+Create each prompt file with a required YAML frontmatter metadata block followed by a Markdown body containing the prompt itself.
 
 ### Frontmatter schema
 
@@ -39,29 +39,46 @@ The category index defines the canonical registry of allowed prompt categories. 
 
 ## Conventions
 
-- One file per prompt
+- Create one file per prompt
 - Use the `.prompt.md` extension for every prompt file
-- The file name must match `name` without the `.prompt.md` extension
+- Ensure the file name matches `name` without the `.prompt.md` extension
 - Keep `description` dense, clear, and practically informative
-- Keep prompt content operational, concise, and directly usable
+- Treat user-provided prompt content as verbatim by default. Only fix obvious mechanical typos or spelling mistakes with exactly one plausible correction; otherwise preserve the original and flag the issue.
+- When authoring new prompt content, keep it operational, concise, and directly usable.
 
-## Creating a new prompt
+## Workflows
+
+### Creating a new prompt
 
 1. Create a new file under `prompts/`
 2. Use the `.prompt.md` extension
 3. Add the required frontmatter
-4. Structure the prompt clearly in Markdown
-5. Commit the prompt file
+4. If setting `category`, follow the “Assigning or creating categories” workflow below.
+5. Structure the prompt clearly in Markdown
+6. Commit the prompt file
 
-## Example
+### Assigning or creating categories
 
-```text
-prompts/example-prompt.prompt.md
-```
+1. Check `data/categories.yml` before assigning a category.
+2. Compare the prompt’s purpose against existing category names, descriptions, and parent relationships.
+3. Use an existing category when it clearly fits.
+4. If no existing category fits, propose a new category and explain why existing categories are insufficient.
+5. Create a new category only after user confirmation.
 
-## Goal
+## Validation checklist
 
-The repository should remain a simple, clean prompt library rather than turning into a chaotic dumping ground for half-finished prompt fragments.
+- Ensure each prompt file uses the `.prompt.md` extension.
+- Ensure frontmatter `name` matches the filename without `.prompt.md`.
+- Ensure required frontmatter fields are present: `name`, `description`, and `status`.
+- Ensure `argument-hint` is present whenever `arguments` is present.
+- Verify that any assigned `category` exists in `data/categories.yml` or was created after user-confirmed category review.
+- Preserve user-provided prompt content according to the verbatim-by-default convention.
+
+## Note
+
+The goal is to keep the repository a simple, clean prompt library rather than turning it into a chaotic dumping ground for half-finished prompt fragments.
+
+To preserve that goal, interpret and apply these instructions flexibly according to the current user request, retrieval or application context, and relevant repository state, without weakening required file-format, frontmatter, category, or confirmation rules.
 
 <!-- AI-NOTE: Additional sections are still required and should be added below to further specify prompt authoring guidance, category indexing, validation rules, and related repository conventions. -->
 
