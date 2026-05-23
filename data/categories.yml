@@ -40,6 +40,16 @@
     than executable code.
   parent: writing
 
+- name: editing
+  description: >-
+    Scope includes prompts for applying, locating, planning, structuring, or
+    operationalizing edits to existing text or documents. Covers revision
+    planning, placement guides, change instructions, insertion and replacement
+    mapping, and controlled document-edit workflows. Distinct from writing,
+    which focuses on prose generation or broad revision, and from analysis,
+    which focuses on interpretation or synthesis rather than edit execution.
+  parent: writing
+
 - name: coding
   description: >-
     Scope includes prompts for software development tasks that create, modify,
