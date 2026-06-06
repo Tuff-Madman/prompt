@@ -97,3 +97,16 @@
     from writing when the source-bound summary is more important than original
     prose generation.
   parent: analysis
+
+- name: context-compression
+  description: >-
+    Scope includes prompts for transforming large, noisy, redundant, or loosely
+    structured context into compact AI-readable context artifacts that preserve
+    future behavioral usefulness under token constraints. Covers compression of
+    conversation histories, voice archives, project notes, memory files, retrieved
+    evidence, standing instructions, and calibration material into durable context
+    that improves model focus, continuity, reliability, retrieval usefulness, or
+    downstream decision quality. Prioritizes signal preservation, redundancy
+    removal, evidence-aware fidelity, query- or task-relevance, and behavioral
+    effect per token. Distinct from summarization by producing operational context
+    for future AI behavior rather than reader-facing condensed prose.
