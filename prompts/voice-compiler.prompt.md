@@ -5,7 +5,7 @@ when_to_use: Use when the user provides a raw voice archive, taste interview out
 arguments:
   voice_archive: Required source material containing raw voice, taste, writing, decision, refusal, phrase, example, or identity signals to compile.
 argument-hint: Provide the raw voice archive or style-calibration material to compile into a compact AI-readable about-me Markdown file.
-status: draft
+status: approved
 category: context-compression
 ---
 
