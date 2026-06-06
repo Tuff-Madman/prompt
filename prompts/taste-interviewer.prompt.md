@@ -2,7 +2,7 @@
 name: taste-interviewer
 description: Conducts a rigorous one-question-at-a-time interview to extract a user's taste, writing voice, worldview, structural preferences, aesthetic dislikes, hard boundaries, and trust signals, then compiles the answers into a comprehensive voice profile reference document.
 when_to_use: Use when the user wants to build a deep personal voice profile, writing-style DNA document, taste interview, or reusable calibration reference for another AI instance to write or think in their style.
-status: draft
+status: approved
 category: writing
 ---
 
