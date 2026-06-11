@@ -37,6 +37,19 @@ The category index defines the canonical registry of allowed prompt categories. 
 | `description` | Yes | A dense AI-addressed semantic scope definition of the category. It defines the category’s intended meaning, primary inclusion boundary, and practical distinction from nearby or potentially confusable categories. It is optimized for interpretive precision, classification usefulness, and retrieval relevance rather than stylistic readability. |
 | `parent` | No | The canonical `name` of the direct parent category. This field is used only for subcategories and omitted for root categories. It defines taxonomy structure inside the category index and must not be used as an additional prompt-level category assignment. |
 
+### Prompt body formatting and authoring standards
+
+If a prompt uses arguments, the body must include placeholders delimited by double curly braces, e.g. `{{argument}}`, exactly matching the keys declared under `arguments`.
+
+- Argument hints: Each argument should be understandable by its hint alone, which specifies whether it is required, plus any defaults, options, necessary instructions, constraints, and usage details.
+
+- Argument references: One consistent style should be used for any prompt-body reference that exactly matches an argument key and is outside placeholders or XML tags:
+  - If a clearly recognizable argument-reference style is already established (e.g. uppercase, camelCase, snake_case, quoted, or backtick references), preserve it consistently wherever it applies.
+  - Otherwise, use backtick references such as `argument`.
+
+- Long-form arguments: Unless otherwise specified, argument values spanning multiple lines should be treated as long-form arguments and wrapped in semantic XML-style tags following the inline structure `<argument>\n{{argument}}\n</argument>`, where `\n` denotes a line break in the prompt body, not literal text.
+  - Continuation phrase: Additionally, include a continuation-style phrase such as `"... wrapped in <argument> tags above/below/in the relevant section/under the relevant heading."`, where the leading `...` means the phrase should be attached organically to the first or most relevant existing mention or reference to that argument within the prompt body when possible.
+
 ## Conventions
 
 - Create one file per prompt
@@ -71,6 +84,7 @@ The category index defines the canonical registry of allowed prompt categories. 
 - Ensure frontmatter `name` matches the filename without `.prompt.md`.
 - Ensure required frontmatter fields are present: `name`, `description`, and `status`.
 - Ensure `argument-hint` is present whenever `arguments` is present.
+- If `arguments` is declared or argument usage is clearly implied, verify a correct `arguments` definition (and its mirroring `argument-hint`), the existence of matching `{{argument}}` placeholders, and strict adherence to the applicable “Prompt body formatting and authoring standards”.
 - Verify that any assigned `category` exists in `data/categories.yml` or was created after user-confirmed category review.
 - Preserve user-provided prompt content according to the verbatim-by-default convention.
 
